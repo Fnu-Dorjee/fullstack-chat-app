@@ -15,9 +15,9 @@ const router = express.Router();
 // All ends points
 
 router.get("/users", protectRoute,getUsersForSidebar);
-
+router.post("/send/:id", protectRoute, sendMessage);
 router.get("/:id", protectRoute, getMessage);
 
-router.post("/send/:id", protectRoute, sendMessage);
+
 
 export default router;
